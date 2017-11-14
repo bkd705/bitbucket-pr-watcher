@@ -1,12 +1,29 @@
 {
   "name": "glx-pr-timer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bkd705/glx-pr-timer.git",
+  "author": "bkd705 <brennenkdenomme@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js"
+    "start:server": "tsc -p ./http -w & nodemon ./http/dist/index.js --watch",
+    "start:client": "webpack-dev-server --config webpack.config.js"
   },
   "devDependencies": {
+    "nodemon": "^1.12.1",
     "ts-loader": "^3.1.1",
     "typescript": "^2.6.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.40",
+    "@types/koa-bodyparser": "^3.0.26",
+    "@types/koa-router": "^7.0.24",
+    "@types/koa-websocket": "^2.1.1",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
+    "koa-websocket": "^4.1.0"
   }
 }

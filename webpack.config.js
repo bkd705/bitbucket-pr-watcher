@@ -1,8 +1,8 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.ts',
-  ouput: {
+  entry: './client/index.ts',
+  output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -17,5 +17,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'client/public'),
   },
 }
