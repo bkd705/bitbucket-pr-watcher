@@ -1,0 +1,12 @@
+{
+  "name": "glx-pr-timer",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js"
+  },
+  "devDependencies": {
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
