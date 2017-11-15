@@ -4,8 +4,9 @@ import * as Router from 'koa-router'
 import { Route } from './models/Route'
 
 export class App {
-  private port: number
+  public server: any
   private Koa: Koa
+  private port: number
   private router: Router
 
   constructor(port: number, routes: Route[]) {
@@ -18,7 +19,7 @@ export class App {
   }
 
   public listen(): void {
-    this.Koa.listen(this.port, () =>
+    this.server = this.Koa.listen(this.port, () =>
       console.log(`Listening on port ${this.port}`)
     )
   }
